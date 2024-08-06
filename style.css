@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system;
+}
+:root {
+  --text-color: white;
+  --background: linear-gradient(rgb(0, 128, 255), rgb(0, 21, 255));
+  --task-bg-color: rgb(238, 227, 227);
+  --text2-color: black;
+  --complete-color: blue;
+  --dlt-color: red;
+  --edit-color: rgb(109, 180, 38);
+}
+.container {
+  width: 100%;
+}
+.container > .section1 {
+  background: var(--background);
+  text-align: center;
+  height: 300px;
+  padding: 7rem 0px;
+}
+.container > .section1 h1 {
+  color: var(--text-color);
+  padding-bottom: 20px;
+  font-size: 2.3rem;
+}
+.container > .section1 > .input input {
+  width: 50%;
+  padding: 8px 0px 8px 15px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+.container > .section1 > .input input::placeholder {
+  font-size: 1.1rem;
+}
+.container > .section1 > .input button {
+  padding: 7px 28px 7px 28px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 20px;
+  font-weight: bold;
+  color: black;
+}
+.container > .section1 > .input button:hover {
+  background-color: grey;
+  color: var(--text-color);
+  font-weight: bold;
+}
+.container > .section1 #error {
+  color: rgb(240, 226, 226);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* section 2 */
+.section2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.section2 h2 {
+  margin-bottom: 10px;
+}
+.hide {
+  display: none;
+}
+/* task part */
+.container > .section3 ul li {
+  width: 60%;
+  margin: 15px auto;
+  background-color: var(--task-bg-color);
+  list-style: none;
+
+  padding: 10px 16px;
+  color: black;
+  border-radius: 5px;
+}
+.container > .section3 ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container > .section3 ul li .strike {
+  text-decoration: line-through;
+}
+.container > .section3 ul li .name {
+  padding-left: 1px;
+  font-size: 1rem;
+  color: var(--text2-color);
+}
+.container > .section3 ul li .btn button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 7px;
+  font-size: 1rem;
+}
+.container > .section3 ul li .btn .complete {
+  color: var(--complete-color);
+  font-weight: bold;
+}
+.container > .section3 ul li .btn .dlt {
+  color: var(--dlt-color);
+  font-weight: bold;
+}
+.container > .section3 ul li .btn .edit {
+  color: var(--edit-color);
+  font-weight: bold;
+}
+/* media */
+
+@media (max-width: 450px) {
+  .container > .section3 ul li {
+    display: block;
+    text-align: center;
+  }
+  .container > .section1 > .input button {
+    padding: 7px 28px 7px 28px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    font-weight: bold;
+    color: black;
+  }
+}
+@media (max-width: 220px) {
+  .container > .section1 > .input button {
+    padding: 7px 28px 7px 28px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  .container > .section1 h1 {
+    font-size: 2rem;
+  }
+}
